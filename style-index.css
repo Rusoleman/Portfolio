@@ -1,0 +1,93 @@
+/*<------------- General Rule ------------->*/
+:root {
+    --text-1-color:#F9F9F9;
+    --text-2-color:#f7040d ;
+    --text-3-color:#7D6B6C;
+    --background-image:#454b5d;
+    --background-bar:#515151;
+
+    --default-margin-text:0;
+
+    --font-1: 'Roboto', sans-serif;
+}
+
+/*<------------- Text-Group-1 ------------->*/
+.container-text{
+    margin-left:4%;
+}
+.text-1 {
+    color:var(--text-1-color);
+    margin:var(--default-margin-text);
+    font-weight: 500;
+}
+.text-2 {
+    color:var(--text-1-color);
+    margin:var(--default-margin-text);
+    font-weight: 600;
+    font-size:50px;
+
+}
+.text-block {
+    width: 100%;
+    font-family:var(--font-1);
+}
+
+.text-button-1 {
+    color:var(--text-2-color);
+    font-weight:300;
+    text-decoration: none;
+    font-family: var(--font-1);
+}
+.text-button-1:hover {
+    color:var(--text-1-color);
+}
+.button-1 {
+    margin-top:4% ;
+    border: 1px solid var(--text-2-color);
+    height: 35px;
+    width: 145px;
+    border-radius: 17.5px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.button-1:hover {
+    background-color:var(--text-2-color)
+}
+
+.line-decoration {
+    margin-top: .85%;
+    height: 70px;
+    width: 3px;
+    z-index: 2;
+    position: absolute;
+    background-color:var(--text-2-color);
+}
+/*<------------- View Group ------------->*/
+
+.bar-decoration-b {
+    width: 290px;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color:var(--background-bar);
+    margin-bottom:2%;
+}
+.bar-decoration-p {
+    width: 92px;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color:var(--text-1-color);
+}
+
+/*<------------- Containers------------->*/
+.container-1 {
+    width: 35%;
+    height: 5%;
+    margin-top: 25%;
+}
+.container-2 {
+    width: 22%;
+    height: 5%;
+    margin-left: 50%;
+    margin-top: 25%;
+}
