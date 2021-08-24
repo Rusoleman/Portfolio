@@ -2,10 +2,20 @@
     --text-1-color:#F9F9F9;
     --text-2-color:#f7040d ;
     --background-bar:#515151;
-    --background-block:#7D6B6C;
+    --background-block:#494B4B;
     --default-margin-text:0;
+    --twitter-hover-color:#1b95f4;
+    --linkedin-hover-color:#0E76A8;
+    --intagram-base-background-color:#d6249f;
+    --inst-grad-1:#fdf497;
+    --inst-grad-2:#fd5949;
+    --inst-grad-3:#d6249f;
+    --inst-grad-4:#285AEB;
 }
 
+.hidden {
+    display: none !important;
+}
 /*<---------------------------------------------
                   About Style 
 ---------------------------------------------->*/
@@ -47,12 +57,57 @@
     margin:var(--default-margin-text);
 }
 .icon-container{
-    margin-top: 4%;
+    margin-top: 8%;
+    display: flex;
 }
+.hover-container{
+    height: 40px;
+    width: 40px;
+    display:flex;
+    text-decoration: none;
+    border-radius:50%;
+    margin-right: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-ext{
+    position: absolute;
+    z-index: 2;
+    height: 0px;
+    width: 0px;
+    border-radius: 50%;
+    background-color:none;
+    border: 2px solid transparent;
+}
+
+div.circle-ext:hover{
+    height: 50px;
+    width: 50px;
+    border:2px solid white;
+    transition-duration: .40s;
+}
+
+a.hover-effect-link:hover {
+    background-color:var(--linkedin-hover-color);
+    transition-duration: .40s;
+}
+
+a.hover-effect-twitter:hover {
+    background-color:var(--twitter-hover-color);
+    transition-duration: .40s;
+}
+
+a.hover-effect-inst:hover {
+    transition-duration: .40s;
+    background:var(--intagram-base-background-color);
+    background: radial-gradient(circle at 30% 107%, var(--inst-grad-1) 0%, var(--inst-grad-1) 5%, var(--inst-grad-2) 45%,var(--inst-grad-3) 60%,var(--inst-grad-4) 90%);
+}
+
 .social-icon {
     color: var(--text-1-color);
     font-size: 30px;
-    padding-right: 7%;
+    padding-right: auto;
 }
 .container-social{
     margin-top:3%;
@@ -97,12 +152,13 @@
     background-color:var(--background-bar);
 }
 
-
+/*---------------- Button-Area ----------------*/
 .area{
     width: 100%;
     margin-top:5%;
     display:flex;
 }
+/*#controls*/
 .title-area {
     font-size:45px;
     font-weight:600;
@@ -121,9 +177,23 @@
     align-items: center;
     display:flex;
 }
+
 .icon-area {
     color:var(--text-1-color);
     font-size:25px;
+    -moz-transition: all 0.8s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+
+i.icon-area:hover{
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 
 .title-skills {
@@ -137,6 +207,12 @@
     display:flex;
     flex-flow: row wrap;
 }
+#flip-container{
+    -webkit-perspective: 100px;
+    perspective:100px;
+
+}
+
 .skill-block {
     width: 65px;
     height:65px;
@@ -144,6 +220,55 @@
     background-color:var(--background-block);
     margin-right: 2%;
     margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*Transitions effects*/
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    transform-origin: 100% 25px;
+}
+
+.flip-container{
+    transform:rotateX(180deg) translate(0, -15px);   
+}
+
+.front, .back{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    text-align: center;
+}
+
+.front{
+    transform: rotateX(0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.back{
+    transform: rotateX(180deg);
+}
+
+.png-image {
+    width: 80%;
+    height: 80%;
+}
+.png-large-image {
+    height: 40%;
+    width: 90%;
+}
+.png-short-image {
+    height: 60%;
+    width: 90%;
+}
+.png-tinny-image {
+    height: 100%;
+    width: 95%;
+}
+.png-tall-image {
+    height: 80%;
+    width: 105%;
 }
 
 .container-project {

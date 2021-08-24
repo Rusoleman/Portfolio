@@ -46,9 +46,21 @@
                                 <div class="subject-bar"></div>
                             </div>
                             <div class="icon-container">
-                                <i class="ri-instagram-line social-icon "></i>
-                                <i class="ri-linkedin-box-line social-icon "></i>
-                                <i class="ri-twitter-line social-icon "></i>
+                                <!-- Instagram Icon -->
+                                <a class="hover-container hover-effect-inst">
+                                    <div class="circle-ext"></div>
+                                    <i class="ri-instagram-line social-icon"></i>
+                                </a>
+                                <!-- Linkedin Icon -->
+                                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile3 " class="hover-container hover-effect-link">
+                                    <div class="circle-ext"></div>
+                                    <i class="ri-linkedin-fill social-icon"></i>
+                                </a>
+                                <!-- Twitter Icon -->
+                                <a class="hover-container hover-effect-twitter">
+                                    <div class="circle-ext"></div>
+                                    <i class="ri-twitter-fill social-icon"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -81,7 +93,7 @@
                     <div class="col-lg-4">
                         <div class="area">
                             <h3 class="title-area">BACK-END</h3>
-                            <button class="button-area">
+                            <button class="button-area" onclick="changeArea();">
                                 <i class="ri-refresh-line icon-area"></i>
                             </button>
                         </div>
@@ -94,13 +106,36 @@
                             <h2 class="subject-text">Skills</h2>
                             <div class="subject-bar"></div>
                         </div>
-                        <div class="container-skills">
-                            <div class="skill-block"></div>
-                            <div class="skill-block"></div>
-                            <div class="skill-block"></div>
-                            <div class="skill-block"></div>
-                            <div class="skill-block"></div>
-                            <div class="skill-block"></div>
+                        <div class="container-skills" id="flip-container">
+                            <div id="skill_1" class="skill-block">
+                                <img id="img_1" class="png-image front" src="helpers/images/PNG/node.png" alt="node_js">
+                                <img id="img_2" class="png-tinny-image back" src="helpers/images/PNG/html5.png" alt="html">
+                                <img id="img_3" class="png-tinny-image hidden" src="helpers/images/PNG/jupyter.png" alt="html">
+                            </div>
+                            <div id="skill_2" class="skill-block">
+                                <img class="png-image front" src="helpers/images/PNG/python.png" alt="python">
+                                
+                            </div>
+                            <div id="skill_3" class="skill-block">
+                                <img class="png-large-image front" src="helpers/images/PNG/go.png" alt="golang">
+                                <img class="png-image back" src="helpers/images/PNG/javascript.png" alt="javascript">
+                            </div>
+                            <div id="skill_4" class="skill-block">
+                                <img class="png-image front" src="helpers/images/PNG/cchar.png" alt="c#">
+                                <img class="png-image back" src="helpers/images/PNG/react.png" alt="react_js">
+                            </div>
+                            <div id="skill_5" class="skill-block">
+                                <img class="png-short-image front" src="helpers/images/PNG/docker.png" alt="docker">
+                                <img class="png-image back" src="helpers/images/PNG/adobexd.png" alt="adobexd">
+                            </div>
+                            <div id="skill_6" class="skill-block">
+                                <img class="png-image front" src="helpers/images/PNG/kubernetes.png" alt="kubernetes">
+                                <img class="png-tall-image back" src="helpers/images/PNG/typescript.png" alt="typescript">
+                            </div>
+                            <div id="skill_7" class="skill-block">
+                                <img class="png-image front" src="helpers/images/PNG/postgresql.png" alt="postgresql">
+                                <img class="png-image back" src="helpers/images/PNG/dart.png" alt="dart">
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -123,5 +158,6 @@
             </div>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
