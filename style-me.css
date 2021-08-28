@@ -2,7 +2,7 @@
     --text-1-color:#F9F9F9;
     --text-2-color:#f7040d ;
     --background-bar:#515151;
-    --background-block:#494B4B;
+    --background-block:#323434;
     --default-margin-text:0;
     --twitter-hover-color:#1b95f4;
     --linkedin-hover-color:#0E76A8;
@@ -233,6 +233,7 @@ i.icon-area:hover{
     transform:rotateX(180deg) translate(0, -15px);   
 }
 
+
 .front, .back{
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -269,6 +270,10 @@ i.icon-area:hover{
 .png-tall-image {
     height: 80%;
     width: 105%;
+}
+.png-big-image {
+    height: 90%;
+    width: 80%;
 }
 
 .container-project {
